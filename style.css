@@ -1,0 +1,33 @@
+.header .header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__logo-image {
+  width: 48px;
+  height: 48px;
+}
+
+.nav__link--current {
+  font-weight: bold;
+}
+
+.main__promo .promo__image {
+  width: 60%;
+  height: 60%;
+}
+
+.main__bands .bands-list__item-image {
+  width: 200px;
+  height: 200px;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.main__feedback .feedback__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}

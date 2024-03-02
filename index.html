@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LunarNight</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a class="header__logo-link">
+          <img
+            src="./images/logo.png"
+            alt="LunarNight logo"
+            class="header__logo-image"
+          />
+        </a>
+        <h1 class="header__logo-title">LunarNight</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--current">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="./downloads.html" class="nav__link">Downloads</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="main__promo">
+        <h2 class="main__title visually-hidden">LunarNight</h2>
+        <img
+          src="./images/promo.png"
+          alt="LunarNight promo image"
+          class="promo__image"
+        />
+      </section>
+      <section class="main__bands">
+        <h2 class="bands__title">Bands</h2>
+        <ul class="bands-list">
+          <li class="bands-list__item">
+            <img
+              src="./images/gorillaz.png"
+              alt="Gorillaz image"
+              class="bands-list__item-image"
+            />
+            <h3 class="bands-list__item-title">Gorillaz</h3>
+            <p class="bands-list__item-text">
+              Gorillaz is a virtual band created in 1998 by Damon Albarn and
+              Jamie Hewlett, known for their animated members 2D, Murdoc,
+              Noodle, and Russel. The band seamlessly blends various genres,
+              including rock, hip-hop, and electronic, producing chart-topping
+              hits like "Clint Eastwood" and "Feel Good Inc."
+            </p>
+            <a href="./bands/gorillaz.html" class="bands-list__item-link"
+              >Band webpage</a
+            >
+            <a href="./downloads.html" class="bands-list__item-link"
+              >Downloads</a
+            >
+          </li>
+          <li class="bands-list__item">
+            <img
+              src="./images/health.png"
+              alt="Health image"
+              class="bands-list__item-image"
+            />
+            <h3 class="bands-list__item-title">Health</h3>
+            <p class="bands-list__item-text">
+              Health is a noise rock band formed in Los Angeles in 2005,
+              consisting of members Jake Duzsik, Jupiter Keyes, John
+              Famiglietti, and Benjamin Jared Miller. Renowned for their
+              energetic live performances, Health fuses elements of electronic,
+              punk, and industrial music. Their discography includes albums like
+              "Death Magic" and "Vol. 4: Slaves of Fear."
+            </p>
+            <a href="./bands/health.html" class="bands-list__item-link"
+              >Band webpage</a
+            >
+            <a href="./downloads.html" class="bands-list__item-link"
+              >Downloads</a
+            >
+          </li>
+          <li class="bands-list__item">
+            <img
+              src="./images/kobaryo.png"
+              alt="Kobaryo image"
+              class="bands-list__item-image"
+            />
+            <h3 class="bands-list__item-title">Kobaryo</h3>
+            <p class="bands-list__item-text">
+              Kobaryo is the alias of Japanese electronic music producer and DJ
+              Kenta-v.ez., specializing in the hardcore and gabber genres.
+              Kobaryo gained recognition for intense and fast-paced tracks,
+              often featured in the rhythm game scene. Known for his unique
+              style, Kobaryo has contributed to the vibrant and diverse
+              electronic music landscape, appealing to fans of high-energy beats
+              and intricate soundscapes.
+            </p>
+            <a href="./bands/kobaryo.html" class="bands-list__item-link"
+              >Band webpage</a
+            >
+            <a href="./downloads.html" class="bands-list__item-link"
+              >Downloads</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="main__video">
+        <h2 class="video__title">Latest release</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/wXOqYhpX4l4?si=eKUiEfPYUZsY8R4b"
+          title="Latest release"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="video__youtube"
+        ></iframe>
+      </section>
+      <section class="main__prices">
+        <h2 class="prices__title">Prices</h2>
+        <table class="prices__table" border="1">
+          <tr class="prices__table-row">
+            <th class="prices__table-headers">Band</th>
+            <th class="prices__table-headers">Price</th>
+            <th class="prices__table-headers">Number of tracks</th>
+          </tr>
+          <tr class="prices__table-row">
+            <td class="prices__table-cell"><b>Gorillaz</b></td>
+            <td class="prices__table-cell">49.99$</td>
+            <td class="prices__table-cell">28</td>
+          </tr>
+          <tr class="prices__table-row">
+            <td class="prices__table-cell"><b>Health</b></td>
+            <td class="prices__table-cell">24.99$</td>
+            <td class="prices__table-cell">14</td>
+          </tr>
+          <tr class="prices__table-row">
+            <td class="prices__table-cell"><b>Kobaryo</b></td>
+            <td class="prices__table-cell">19.99$</td>
+            <td class="prices__table-cell">9</td>
+          </tr>
+        </table>
+      </section>
+      <section class="main__feedback">
+        <h2 class="feedback__title">Feedback</h2>
+        <p class="feedback__text">
+          Please provide your feedback in the form below
+        </p>
+        <form action="#" class="feedback__form">
+          <label for="name" class="form__label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form__input"
+            placeholder="Your name"
+            required
+          />
+          <label for="email" class="form__label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form__input"
+            placeholder="Your email"
+            required
+          />
+          <label for="country" class="form__label">Country:</label>
+          <select name="country" id="country" class="form__select">
+            <option value="ukraine" class="select__option">Ukraine</option>
+            <option value="germany" class="select__option">Germany</option>
+            <option value="usa" class="select__option">USA</option>
+          </select>
+          <label for="subject" class="form__label">Subject:</label>
+          <textarea
+            name="subject"
+            id="subject"
+            rows="10"
+            class="form__textarea"
+            required
+          ></textarea>
+          <label for="rating" class="form__label"
+            >How do you rate your overall experience?</label
+          >
+          <div class="form__rating">
+            <input
+              class="rating__input-radio"
+              type="radio"
+              name="rating"
+              id="rating_bad"
+              value="bad"
+              required
+            />
+            <label class="rating__label" for="rating_bad"> Bad </label>
+            <input
+              class="rating__input-radio"
+              type="radio"
+              name="rating"
+              id="rating_good"
+              value="good"
+              required
+            />
+            <label class="rating__label" for="rating_good"> Good </label>
+            <input
+              class="rating__input-radio"
+              type="radio"
+              name="rating"
+              id="rating_excellent"
+              value="excellent"
+              required
+            />
+            <label class="rating__label" for="rating_excellent">
+              Excellent
+            </label>
+          </div>
+          <input type="submit" class="form__submit-btn" value="Submit" />
+        </form>
+      </section>
+      <section class="main__contacts">
+        <h2 class="contacts__title">Contacts</h2>
+        <address class="contacts-address">
+          <p class="contacts-address__text">
+            Khmel'nyts'ke Hwy, 95, Vinnytsia, Vinnytsia Oblast, 21000
+          </p>
+          <a href="mailto:example@mail.com" class="contacts-address__mail"
+            >example@mail.com</a
+          >
+          <a href="tel:123456789" class="contacts-address__number"
+            >123-456-789</a
+          >
+        </address>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; 2024 LunarNight. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>
