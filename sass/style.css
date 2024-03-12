@@ -1,0 +1,292 @@
+@import url(./reset.css);
+@import url("https://fonts.cdnfonts.com/css/adam-2");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Oswald", sans-serif;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 12.5% 30px 12.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px) brightness(3);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  color: white;
+  font-size: 16px;
+  mask-image: linear-gradient(rgb(12, 146, 223) 70%, transparent);
+  -webkit-mask-image: linear-gradient(black 70%, transparent);
+}
+.nav__item {
+  margin-right: 25px;
+}
+.nav__link {
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+  color: inherit;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  align-items: center;
+}
+.nav__link:hover, .nav__link:focus {
+  transition: 0.5s ease-out;
+  color: rgb(255, 203, 252);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  text-decoration: underline;
+}
+.nav__link--current:hover, .nav__link--current:focus {
+  text-decoration: none;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+.nav__logo-img {
+  width: 64px;
+  height: 64px;
+}
+.nav__logo-title {
+  font-family: "ADAM", sans-serif;
+  font-size: 40px;
+  margin-left: 5px;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.promo__image {
+  width: 100%;
+  height: 945px;
+}
+
+.bands__title {
+  text-align: center;
+  font-size: 60px;
+  margin: 20px 0 20px 0;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.bands-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bands-list__item {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 550px;
+}
+.bands-list__item-image {
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+}
+.bands-list__item-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0 10px 0;
+}
+.bands-list__item-text {
+  text-align: justify;
+  padding-bottom: 10px;
+  margin-bottom: auto;
+}
+.bands-list__item-link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  background-color: gray;
+  text-align: center;
+  width: 95%;
+  padding: 6px 0 6px 0;
+}
+
+.video {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 30px 0 30px 0;
+  background-color: rgb(12, 13, 15);
+}
+.video__title {
+  text-align: center;
+  font-size: 60px;
+  margin: 20px 0 20px 0;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+.prices__title {
+  text-align: center;
+  font-size: 60px;
+  margin: 20px 0 20px 0;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.prices__table {
+  border: 1px solid;
+  width: 65%;
+}
+.prices__table-headers {
+  height: 40px;
+  font-size: 22px;
+}
+.prices__table-cell {
+  text-align: center;
+  height: 30px;
+}
+
+.feedback {
+  margin-bottom: 30px;
+}
+.feedback__title {
+  font-size: 24px;
+  margin: 20px 0 20px 0;
+}
+.feedback__text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.feedback__form {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.form__input, .form__select, .form__textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form__input:focus, .form__select:focus, .form__textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+.form__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form__textarea {
+  resize: vertical;
+}
+.form__rating {
+  display: flex;
+  align-items: center;
+}
+.form__rating__input-radio {
+  display: none;
+}
+.form__rating__input-radio:checked + .rating__label {
+  color: #f39c12;
+}
+.form__rating__label {
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #f2f2f2;
+}
+.form__rating__label:hover {
+  color: #e74c3c;
+}
+.form__submit-btn {
+  background-color: rgb(255, 203, 252);
+  margin: 10px 0 0 0;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form__submit-btn:hover {
+  background-color: rgb(255, 203, 252);
+}
+
+.contacts {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+.contacts__title {
+  margin: 5px 0;
+}
+.contacts-address {
+  max-width: 50%;
+  width: 100%;
+}
+.contacts-address__text, .contacts-address__mail, .contacts-address__number {
+  margin-bottom: 10px;
+}
+.contacts-address__mail, .contacts-address__number {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  max-width: 1000px;
+}
+.footer__copyright {
+  max-width: 50%;
+  width: 50%;
+  margin-top: auto;
+}
+
+.visually-hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
