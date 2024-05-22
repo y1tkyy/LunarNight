@@ -4,26 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="page-title">LunarNight</title>
-    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="preload" href="./sass/style.min.css" as="style" />
+    <link rel="preload" href="./images/logo.webp" as="image" />
+    <link rel="preload" href="./images/promo.webp" as="image" />
+    <link rel="stylesheet" href="./sass/style.min.css" />
+    <style>
+      .nav__logo-img {
+        max-width: 100px;
+      }
+      .promo__image {
+        width: 100%;
+        height: auto;
+      }
+      .bands-list__item-image {
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body class="body">
-    <section class="cli" id="cli">
-      <span style="white-space: pre-line"
-        >.██████╗.████████╗██╗...██╗.█████╗.██╗.....███████╗.██████╗.███████╗████████╗.██╗.██████╗██╗.....██████╗..██████╗.██████╗.██╗..██╗
-        ██╔═══██╗╚══██╔══╝██║...██║██╔══██╗██║.....██╔════╝██╔═══██╗██╔════╝╚══██╔══╝██╔╝██╔════╝╚██╗....╚════██╗██╔═████╗╚════██╗██║..██║
-        ██║...██║...██║...██║...██║███████║██║.....███████╗██║...██║█████╗.....██║...██║.██║......██║.....█████╔╝██║██╔██║.█████╔╝███████║
-        ██║...██║...██║...╚██╗.██╔╝██╔══██║██║.....╚════██║██║...██║██╔══╝.....██║...██║.██║......██║....██╔═══╝.████╔╝██║██╔═══╝.╚════██║
-        ╚██████╔╝...██║....╚████╔╝.██║..██║███████╗███████║╚██████╔╝██║........██║...╚██╗╚██████╗██╔╝....███████╗╚██████╔╝███████╗.....██║
-        .╚═════╝....╚═╝.....╚═══╝..╚═╝..╚═╝╚══════╝╚══════╝.╚═════╝.╚═╝........╚═╝....╚═╝.╚═════╝╚═╝.....╚══════╝.╚═════╝.╚══════╝.....╚═╝
-      </span>
-    </section>
     <header class="header">
       <nav class="nav">
         <a class="nav__logo">
           <img
-            src="./images/logo.png"
+            src="./images/logo.webp"
             alt="LunarNight logo"
             class="nav__logo-img"
+            width="100"
+            height="100"
           />
           <h1 class="nav__logo-title">LunarNight</h1>
         </a>
@@ -37,6 +45,9 @@
           <li class="nav__item">
             <a href="./downloads.html" class="nav__link">Downloads</a>
           </li>
+          <li class="nav__item">
+            <a href="./player.html" class="nav__link">Player</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -44,9 +55,12 @@
       <section class="promo">
         <h2 class="promo__title visually-hidden">LunarNight</h2>
         <img
-          src="./images/promo.png"
+          src="./images/promo.webp"
           alt="LunarNight promo image"
           class="promo__image"
+          width="600"
+          height="400"
+          loading="lazy"
         />
       </section>
       <div class="container">
@@ -55,9 +69,12 @@
           <ul class="bands-list">
             <li class="bands-list__item">
               <img
-                src="./images/gorillaz.png"
+                src="./images/gorillaz.webp"
                 alt="Gorillaz image"
                 class="bands-list__item-image"
+                width="300"
+                height="200"
+                loading="lazy"
               />
               <h3 class="bands-list__item-title">Gorillaz</h3>
               <p class="bands-list__item-text">
@@ -76,9 +93,12 @@
             </li>
             <li class="bands-list__item">
               <img
-                src="./images/health.png"
+                src="./images/health.webp"
                 alt="Health image"
                 class="bands-list__item-image"
+                width="300"
+                height="200"
+                loading="lazy"
               />
               <h3 class="bands-list__item-title">Health</h3>
               <p class="bands-list__item-text">
@@ -98,9 +118,12 @@
             </li>
             <li class="bands-list__item">
               <img
-                src="./images/kobaryo.png"
+                src="./images/kobaryo.webp"
                 alt="Kobaryo image"
                 class="bands-list__item-image"
+                width="300"
+                height="200"
+                loading="lazy"
               />
               <h3 class="bands-list__item-title">Kobaryo</h3>
               <p class="bands-list__item-text">
@@ -131,6 +154,7 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             class="video__youtube"
+            loading="lazy"
           ></iframe>
         </section>
         <section class="prices">
@@ -234,8 +258,6 @@
           </form>
         </section>
       </div>
-    </main>
-    <footer class="footer">
       <section class="contacts">
         <h2 class="contacts__title">Contacts</h2>
         <address class="contacts-address">
@@ -250,10 +272,11 @@
           </a>
         </address>
       </section>
+    </main>
+    <footer class="footer">
       <p class="footer__copyright">
         &copy; 2024 LunarNight. All Rights Reserved.
       </p>
     </footer>
-    <script src="./js/script.js"></script>
   </body>
 </html>
