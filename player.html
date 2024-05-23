@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player</title>
+    <link rel="stylesheet" href="./sass/player.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__logo">
+          <img
+            src="./images/logo.png"
+            alt="LunarNight logo"
+            class="nav__logo-img"
+          />
+          <h1 class="nav__logo-title">LunarNight</h1>
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="./downloads.html" class="nav__link">Downloads</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--current">Player</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div id="top">
+        <div class="perspective">
+          <div class="card">
+            <div
+              class="thumb"
+              id="coverImage"
+              style="background-image: url(./images/placeholder.png)"
+            ></div>
+            <h2 id="musicTitle">LunarNight</h2>
+            <span id="musicArtist">your music choice!</span>
+          </div>
+        </div>
+      </div>
+      <section class="player">
+        <h1>Music Upload and Stream</h1>
+        <div class="upload">
+          <form id="uploadForm" enctype="multipart/form-data">
+            <input type="text" name="title" placeholder="Title" required />
+            <input type="text" name="artist" placeholder="Artist" required />
+            <input type="file" name="audio" accept="audio/*" required />
+            <input type="file" name="cover" accept="image/*" required />
+            <button type="submit">Upload Music</button>
+          </form>
+        </div>
+        <div class="allMusic">
+          <h2>All Music</h2>
+          <ul id="musicList"></ul>
+        </div>
+        <div class="audioPlayer">
+          <audio id="audioPlayer" controls></audio>
+        </div>
+      </section>
+    </main>
+    <script src="./js/player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+@import url(./reset.css);
+@import url("https://fonts.cdnfonts.com/css/adam-2");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff, #f8dce2);
+  font-family: "Oswald", sans-serif;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 12.5% 30px 12.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(8px) brightness(1.1);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  mask-image: linear-gradient(rgb(12, 146, 223) 70%, transparent);
+  -webkit-mask-image: linear-gradient(black 70%, transparent);
+}
+
+.nav__item {
+  margin-right: 25px;
+}
+
+.nav__link {
+  text-shadow: 0 0 5px black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 400;
+  align-items: center;
+  color: inherit;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  transition: 0.5s ease-out;
+  color: rgb(255, 203, 252);
+  text-decoration: underline;
+}
+
+.nav__link--current:hover,
+.nav__link--current:focus {
+  text-decoration: none;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo-img {
+  width: 64px;
+  height: 64px;
+}
+
+.nav__logo-title {
+  font-family: "ADAM", sans-serif;
+  font-size: 40px;
+  margin-left: 5px;
+  text-shadow: 0 0 5px black;
+}
+
+main {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.perspective {
+  width: 100%;
+  perspective: 1000px;
+}
+
+#top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  margin: auto;
+  box-shadow: 0 70px 63px -60px #494848;
+  transform-style: preserve-3d;
+  transition: transform 0.05s linear;
+}
+.card .thumb {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+}
+.card .thumb:after {
+  background: inherit;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -60px;
+  top: 40px;
+  width: 100%;
+  height: 108%;
+  z-index: -1;
+  filter: blur(55px);
+}
+.card h2 {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  font-size: 40px;
+  font-weight: 100;
+  transform: translateZ(80px);
+  text-shadow: 0 0 5px rgb(129, 96, 136);
+}
+.card span {
+  position: absolute;
+  bottom: 40px;
+  right: -280px;
+  font-size: 37px;
+  font-weight: 600;
+  transform: translateZ(35px);
+  text-shadow: 0 0 5px rgb(129, 96, 136);
+}
+
+.player {
+  background-color: #494848;
+  height: 600px;
+  width: 600px;
+  border-radius: 15px;
+  border: 5px solid #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #ffffff;
+}
+.player h1,
+.player h2 {
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.upload,
+.allMusic {
+  flex: 1;
+}
+
+.upload form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upload form input[type=text],
+.upload form input[type=file] {
+  padding: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  background-color: #494848;
+  color: #ffffff;
+  font-size: 14px;
+}
+.upload form input[type=text]:focus,
+.upload form input[type=file]:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+.upload form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5a5a5a;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.upload form button:hover {
+  background-color: #6b6b6b;
+}
+
+.allMusic {
+  overflow-y: auto;
+}
+.allMusic #musicList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.allMusic #musicList li {
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  justify-content: space-between;
+}
+.allMusic #musicList li:last-child {
+  border-bottom: none;
+}
+
+.delButton {
+  border: 2px solid crimson;
+  border-radius: 5px;
+  background-color: rgb(150, 90, 102);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.delButton:hover {
+  background-color: rgb(150, 90, 102);
+}
+
+.audioPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audioPlayer audio {
+  width: 100%;
+  outline: none;
+}
+
+@media (max-width: 1350px) {
+  * {
+    overflow-x: hidden;
+  }
+  .nav {
+    padding: 16px 10px 30px 10px;
+  }
+  .nav__item {
+    overflow-y: hidden;
+    margin-right: 10px;
+  }
+  .nav__link {
+    overflow-y: hidden;
+    text-shadow: 0 0 3px black;
+  }
+  .nav__logo-title {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .perspective {
+    overflow-y: hidden;
+  }
+  #top {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    overflow-y: hidden;
+  }
+  .card .thumb {
+    height: 0;
+    padding-top: 100%;
+    overflow-y: hidden;
+  }
+  .card h2,
+  .card span {
+    color: #ffffff;
+    overflow-y: hidden;
+  }
+  .card h2 {
+    top: 10px;
+    left: 10px;
+    font-size: 1.5em;
+  }
+  .card span {
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2em;
+  }
+  .player {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    border: none;
+    height: auto;
+  }
+  .player h1 {
+    overflow-y: hidden;
+  }
+  .player h2 {
+    overflow-y: hidden;
+  }
+  .allMusic #musicList li {
+    align-items: center;
+  }
+  .allMusic #musicList li button {
+    padding: 5px 10px;
+    background-color: #d9534f;
+  }
+  .allMusic #musicList li button:hover {
+    background-color: #c9302c;
+  }
+}/*# sourceMappingURL=player.css.map */
