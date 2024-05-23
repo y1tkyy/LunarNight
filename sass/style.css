@@ -52,6 +52,8 @@ body {
 .nav__logo {
   display: flex;
   align-items: center;
+  color: white;
+  text-decoration: none;
 }
 .nav__logo-img {
   width: 64px;
